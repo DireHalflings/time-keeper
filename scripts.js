@@ -55,10 +55,9 @@ const setClock = () => {
 
 const setAmPm = () => {
   const now = new Date();
-  console.log(now);
+  const midDayMarker = now.toLocaleTimeString().split(" ")[1];
   const ele = document.querySelector('.am-pm');
-  console.log(ele);
-  ele.innerText="AM"
+  ele.innerText = midDayMarker;
 }
 
 setInterval(setClock, 1000);
